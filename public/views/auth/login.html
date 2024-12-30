@@ -8,22 +8,48 @@
     <script src="/public/js/login.js"></script>
 </head>
 <body>
-    <div class="login-container">
-        <h2>Login</h2>
-        <form action="/admin/paseadores/indexPaseadores.html" id="form_id" name="myform">
-            <div class="form-group">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card card-outline card-primary">
+                <div class="card-header">
+                    <center>
+                        <h3 class="card-title">Login</h3>
+                    </center>
+                </div>
+                <div class="card-body">        
+                    <form onsubmit="validarLogin(event)" id="form_id" name="myform">
+                        <div class="row">
+                            <div class="col-md-9">
+                                <!-- Formulario -->
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="username">Usuario<b> *</b></label>
+                                            <input type="text" id="username" name="username" placeholder="Ingrese su usuario" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="password">Contraseña<b> *</b></label>
+                                            <input type="password" id="password" name="password" placeholder="Ingrese la contraseña" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <button type="submit">Iniciar Sesión</button>
+                                    ¿No tienes cuenta? <a href="register.html">Registrarme</a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password">
-            </div>
-            <button type="submit">Login</button>
-            <a href="register.html">Registrarme</a>
-            <!-- <input type="button" value="LOGIN" id="submit" onclick="validate()"/> -->
-        </form>       
-        
+        </div>
     </div>
+    
 </body>
 </html>

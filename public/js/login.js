@@ -18,7 +18,7 @@ function validarLogin(event){
 
     if(usuario === usuarioCorrecto && contrasena === contrasenaCorrecta){
         // Redirecciona a la vista de paseadores
-        window.location.href = "/views/admin/paseadores/indexPaseadores.html";
+        window.location.href = "../admin/paseadores/indexPaseadores.html";
     }else{
         alert('Usuario o contraseña incorrectos');
     }
