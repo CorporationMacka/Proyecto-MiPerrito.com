@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miperrito.com</title>
+    <link rel="stylesheet" href="CSS/estilos.css">
+</head>
+
+<body>
+
+    <h1>Registro de paseadores</h1>
+
+    <div>
+
+        <form id="registroForm">
+
+            <label for="nompas">Nombre paseador</label>
+            <input type="text" name="name" id="nompas" required>
+
+            <label for="Tipide">Tipo de identificación"></label>
+            <input type="number" name="name" id="Tipide" required>
+
+            <label for="Numcelpas">Número celular nuevo paseador</label>
+            <input type="number" name="name" id="Numcelpas" required>
+
+
+            <label for="email"> Email </label>
+            <input type="email" name="email" id="email" required>
+
+
+            <label for="Numcelemp">Número celular empresa </label>
+            <input type="number" name="name" id="Numcelemp" required>
+
+            <label for="Diremp">Dirección de la empresa"></label>
+            <input type="text" name="name" id="Diremp" required>
+
+            <label for="Dirpas">Dirección del paseador"></label>
+            <input type="text" name="name" id="Dirpas" required>
+
+            <label for="Imgpas">imagen del paseador</label>
+            <input type="file" name="Imgpas" id="file" accept=".jpg, .jpeg, .png, .webp" required>
+               
+            <center>
+            <output id="list" style="max-width: 100%;"></output>
+            </center>
+
+            <script>
+                function archivo(evt) {
+                    var files = evt.target.files; //FileList object
+                    // obtenemos la imagen del campo "file".
+                    for (var i = 0, f; f = files[i]; i++) {
+                        // solo admitimos imagenes
+                        if (!f.type.match('image.*')) {
+                            continue;
+                        }
+                        var reader = new FileReader();
+                        reader.onload = (function (theFile) {
+                            return function (e) {
+                                document.getElementById("list").innerHTML = ['<img class="thumb thumbnail" src="', e.target.result, '" style="max-width: 100%" title="', escape(theFile.name), '"/>'].join('');
+                            };
+                        })(f);
+                        reader.readAsDataURL(f);
+                    }
+                }
+                document.getElementById('file').addEventListener('change', archivo, false);
+            </script> 
+
+            <label for="Tarifa">Tarifa por hora</label>
+            <input type="number" name="name" id="Tarifa" required>
+
+            <label for="Calpas">Calificación del paseador</label>
+            <input type="number" name="name" id="Calpas" required>
+
+
+        </form>
+
+    </div>
+
+    <div>
+
+        
+
+
+    </div>
+
+
+
+
+
+</body>
+
+</html>
