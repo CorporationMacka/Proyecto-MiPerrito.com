@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Miperrito.com</title>
+    <link rel="stylesheet" href="/public/CSS/estilos.css">
 </head>
 <body>
     <div class="container">
         <h2>Registro de Usuarios</h2>
-        <form action="/public/views/admin/auth/register.html" method="POST">
+        <form action="./register.html">
             <div class="form-group">
                 <label for="username">Nombre de usuario:</label>
                 <input type="text" id="username" name="username" required>
@@ -27,7 +27,7 @@
                 <input type="password" id="confirm_password" name="confirm_password" required>
             </div>
             <button type="submit">Registrarse</button>
-            <a href="/public/views/admin/auth/login.html">Ir a Login</a>
+            <a href="./login.html">Ir a Login</a>
         </form>
     </div>
 </body>
